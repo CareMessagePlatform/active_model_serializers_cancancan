@@ -1,13 +1,20 @@
-require 'active_model/serializer/reflection'
-
 module ActiveModel
   class Serializer
-    class Reflection < Field
-      prepend ActiveModel::Serializer::CanCan::ReflectionValue
+    module Associations
+      class Config
+        def authorize?
+          !!options[:authorize]
+        end
+      end
 
-      def authorize?
-        !!options[:authorize]
+      class HasMany
+        prepend ActiveModel::Serializer::CanCan::HasMany
+      end
+
+      class HasOne
+        prepend ActiveModel::Serializer::CanCan::HasOne
       end
     end
   end
 end
+
