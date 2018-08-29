@@ -17,10 +17,10 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_dependency 'active_model_serializers', '~> 0.10.0'
-  gem.add_dependency 'cancancan', '~> 2.1.0'
+  gem.add_dependency 'cancancan', '~> 3.0.0'
 
-  gem.add_development_dependency 'bundler'
-  gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'bundler', '< 11.0'
+  gem.add_development_dependency 'rake', '< 11.0'
   gem.add_development_dependency 'rspec', '~> 3'
   gem.add_development_dependency 'rspec-its'
   gem.add_development_dependency 'pry'
