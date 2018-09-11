@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_dependency 'active_model_serializers'
-  gem.add_dependency 'cancancan', '~> 2.1.0'
+  gem.add_dependency 'cancancan', '~> 2.2.0'
 
   gem.add_development_dependency 'bundler', '< 11.0'
   gem.add_development_dependency 'rake', '< 11.0'
