@@ -3,11 +3,11 @@ module ActiveModel
     module CanCan
       module Helpers
         def current_ability
-          Ability.new(instance_options[:scope].current_user)
+          Ability.new(instance_options[:scope])
         end
 
         def current_user
-          instance_options[:scope].current_user
+          instance_options[:scope]
         end
 
         def can?(*args)
