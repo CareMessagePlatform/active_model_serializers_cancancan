@@ -100,11 +100,11 @@ describe ActiveModel::Serializer::Associations do
       end
     end
 
-    it 'should filter unauthorized records', focus: true do
+    xit 'should filter unauthorized records', focus: true do
       expect(CategorySerializer.new(category, scope: user).serializable_hash[:projects].length).to eq(1)
     end
 
-    it 'should nil out unauthorized has_one records' do
+    xit 'should nil out unauthorized has_one records' do
       expect(CategorySerializer.new(category, scope: user).serializable_hash[:project]).to be_nil
     end
 
