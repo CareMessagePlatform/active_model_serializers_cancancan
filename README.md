@@ -18,19 +18,6 @@ Or install it yourself as:
 
 ## Usage
 
-### Associations
-
-`hasOne` and `hasMany` serializer macros now support an additional property, `authorize`. Associations with this property set to true will be authorized and filtered via CanCan. For example:
-
-```ruby
-class PostSerializer < ActiveModel::Serializer
-  attributes :title, :content
-
-  has_one :author, authorize: true
-  has_many :comments, authorize: true
-end
-```
-
 ### Helpers
 
 Serializers now also have access to the same helpers as controllers, namely `current_ability`, `can?`, and `cannot?`.
